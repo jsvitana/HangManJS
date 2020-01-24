@@ -18,3 +18,25 @@
     height:50px;
     margin-top: 20px;
 }
+
+/* Used Character */
+#gameBoard .usedCharacters {
+    position: absolute;
+    width: 307px;
+    text-decoration: underline black;
+}
+#gameBoard .usedCharacters .usedCharacterHeader {
+    color:black;
+    text-align: center;
+}
+
+/*  */
+#gameBoard .hangPicHide {
+    position: absolute;
+    margin-left: 700px;
+}
+#gameBoard .hangPicShow {
+    position: absolute;
+    margin-left: 267px;
+}
+
