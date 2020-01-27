@@ -10,6 +10,24 @@
     background-color: cornflowerblue;
 }
 
+/* The Modal */
+#gameBoard .theModal.on{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 225px;
+    height:30%;
+    width:30%;
+    z-index: 1;
+    background-color: rgb(211, 205, 205);
+    border-radius: 20%;
+}
+#gameBoard .theModal.on .content {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
 /* Header */
 #gameBoard .header{
     text-align: center;
@@ -23,20 +41,65 @@
 #gameBoard .usedCharacters {
     position: absolute;
     width: 307px;
-    text-decoration: underline black;
-}
-#gameBoard .usedCharacters .usedCharacterHeader {
     color:black;
     text-align: center;
 }
+#gameBoard .usedCharacters .usedCharacterHeader {
+    text-decoration: underline;
+}
+#gameBoard .usedCharacters .usedCharactersLetters {
+    font-weight: bold;
+}
 
-/*  */
-#gameBoard .hangPicHide {
+/* Hangman Picture*/
+#gameBoard .hangPic {
     position: absolute;
     margin-left: 700px;
 }
-#gameBoard .hangPicShow {
-    position: absolute;
+#gameBoard .hangPic.show {
     margin-left: 267px;
+}
+
+/* the Actual Word */
+#gameBoard .theWord {
+    position:absolute;
+    width: 100%;
+    margin-top:200px;
+    text-align:center;
+}
+#gameBoard .theWord .theWordLetter {
+    color: black;
+    font-size: 35px;
+    padding: 5px;
+}
+
+/* The Keyboard */
+#gameBoard .keyboard {
+    position: absolute;
+    margin-top: 350px;  
+    height: 100px;
+    width:100%;
+    text-align: center;
+}
+#gameBoard .keyboard .key.unused {
+    border: solid black;
+    background-color: rgb(29, 28, 28);
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+#gameBoard .keyboard .key.used {
+    border: solid gray;
+    background-color: rgb(175, 175, 175);
+    padding: 10px;
+    margin-bottom: 20px;
+    user-select: none;
+}
+#gameBoard .keyboard .key.unused:hover {
+    background-color:rgb(128, 124, 124)
+}
+#gameBoard .keyboard .key.unused:active {
+    background-color: #fff;
 }
 

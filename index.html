@@ -4,22 +4,85 @@
 </head>
 <body>
     <div id="gameBoard">
+        <div class="theModal on">
+            <div class="content">
+                <label>The Word You Would Like to Use!</label>
+                <input type="text">
+                <button style="margin:5px;">Enter!</button>
+            </div>
+        </div>
+
         <div class="header">
             <h1>Welcome To Hangman!</h1>
         </div>
 
+        <!-- Used Character Section -->
         <div class="usedCharacters">
             <h3 class="usedCharacterHeader">Used Characters</h3>
+            <div class="usedCharactersLetters">C V S Q F R</div>
         </div>
 
-        <img class="hangPicShow" src="./media/hangmanPole.png">
-        <img class="hangPicHide" src="./media/hangmanPole2.png">
-        <img class="hangPicHide" src="./media/hangmanPole3.png">
-        <img class="hangPicHide" src="./media/hangmanPole4.png">
-        <img class="hangPicHide" src="./media/hangmanPole5.png">
-        <img class="hangPicHide" src="./media/hangmanPole6.png">
-        <img class="hangPicHide" src="./media/hangmanPole7.png">
+        <!-- Hangman Picture Section -->
+        <img class="hangPic show" src="./media/hangmanPole.png">
+        <img class="hangPic show" src="./media/hangmanPole2.png">
+        <img class="hangPic show" src="./media/hangmanPole3.png">
+        <img class="hangPic show" src="./media/hangmanPole4.png">
+        <img class="hangPic hide" src="./media/hangmanPole5.png">
+        <img class="hangPic hide" src="./media/hangmanPole6.png">
+        <img class="hangPic hide" src="./media/hangmanPole7.png">
 
-        <!--<div>Click Here</div>-->
+        <!-- The Actual Word Section -->
+        <div class="theWord">
+            <span class="theWordLetter">F</span>
+            <span class="theWordLetter">_</span>
+            <span class="theWordLetter">R</span>
+            <span class="theWordLetter">_</span>
+            <span class="theWordLetter">_</span>
+            <span class="theWordLetter">_</span>
+            <span class="theWordLetter">_</span>
+            <span class="theWordLetter">C</span>
+            <span class="theWordLetter">_</span>
+        </div>
+
+        <!-- The Keyboard Section -->
+        <div class="keyboard">
+            <span class="key used">Q</span>
+            <span class="key unused">W</span>
+            <span class="key unused">E</span>
+            <span class="key used">R</span>
+            <span class="key unused">T</span>
+            <span class="key unused">Y</span>
+            <span class="key unused">U</span>
+            <span class="key unused">I</span>
+            <span class="key unused">O</span>
+            <span class="key unused">P</span>
+            <br><br><br>
+            <span class="key unused">A</span>
+            <span class="key used">S</span>
+            <span class="key unused">D</span>
+            <span class="key used">F</span>
+            <span class="key unused">G</span>
+            <span class="key unused">H</span>
+            <span class="key unused">J</span>
+            <span class="key unused">K</span>
+            <span class="key unused">L</span>
+            <br><br><br>
+            <span class="key unused">Z</span>
+            <span class="key unused">X</span>
+            <span class="key used">C</span>
+            <span class="key used">V</span>
+            <span class="key unused">B</span>
+            <span class="key unused">N</span>
+            <span class="key unused">M</span>
+        </div>
     </div>
 </body>
+
+<script>
+    function checkLetter() { //Make this listen for a unused key click
+        nextPic = document.getElementsByClassName("hide")[0];
+        nextPic.classList.remove("hide");
+        nextPic.classList.add("show");       
+    }
+
+</script>
