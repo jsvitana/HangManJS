@@ -1,6 +1,8 @@
 <head>
     <title>HangMan JavaScript</title>
     <link rel="stylesheet" type="text/css" href="./css/hangman.css">
+    <script src="./js/jquery.min.js" ></script>
+    <script src="./js/main.js" ></script>
 </head>
 <body>
     <div id="gameBoard">
@@ -19,21 +21,21 @@
         <!-- Used Character Section -->
         <div class="usedCharacters">
             <h3 class="usedCharacterHeader">Used Characters</h3>
-            <div class="usedCharactersLetters">C V S Q F R</div>
+            <div class="usedCharactersLetters"></div>
         </div>
 
         <!-- Hangman Picture Section -->
         <img class="hangPic show" src="./media/hangmanPole.png">
-        <img class="hangPic show" src="./media/hangmanPole2.png">
-        <img class="hangPic show" src="./media/hangmanPole3.png">
-        <img class="hangPic show" src="./media/hangmanPole4.png">
+        <img class="hangPic hide" src="./media/hangmanPole2.png">
+        <img class="hangPic hide" src="./media/hangmanPole3.png">
+        <img class="hangPic hide" src="./media/hangmanPole4.png">
         <img class="hangPic hide" src="./media/hangmanPole5.png">
         <img class="hangPic hide" src="./media/hangmanPole6.png">
         <img class="hangPic hide" src="./media/hangmanPole7.png">
 
         <!-- The Actual Word Section -->
         <div class="theWord">
-            <span class="theWordLetter">F</span>
+            <!--<span class="theWordLetter">F</span>
             <span class="theWordLetter">_</span>
             <span class="theWordLetter">R</span>
             <span class="theWordLetter">_</span>
@@ -41,15 +43,15 @@
             <span class="theWordLetter">_</span>
             <span class="theWordLetter">_</span>
             <span class="theWordLetter">C</span>
-            <span class="theWordLetter">_</span>
+            <span class="theWordLetter">_</span>-->
         </div>
 
         <!-- The Keyboard Section -->
         <div class="keyboard">
-            <span class="key used">Q</span>
+            <span class="key unused">Q</span>
             <span class="key unused">W</span>
             <span class="key unused">E</span>
-            <span class="key used">R</span>
+            <span class="key unused">R</span>
             <span class="key unused">T</span>
             <span class="key unused">Y</span>
             <span class="key unused">U</span>
@@ -58,9 +60,9 @@
             <span class="key unused">P</span>
             <br><br><br>
             <span class="key unused">A</span>
-            <span class="key used">S</span>
+            <span class="key unused">S</span>
             <span class="key unused">D</span>
-            <span class="key used">F</span>
+            <span class="key unused">F</span>
             <span class="key unused">G</span>
             <span class="key unused">H</span>
             <span class="key unused">J</span>
@@ -69,8 +71,8 @@
             <br><br><br>
             <span class="key unused">Z</span>
             <span class="key unused">X</span>
-            <span class="key used">C</span>
-            <span class="key used">V</span>
+            <span class="key unused">C</span>
+            <span class="key unused">V</span>
             <span class="key unused">B</span>
             <span class="key unused">N</span>
             <span class="key unused">M</span>
