@@ -11,14 +11,14 @@
 }
 
 /* The Modal */
-#gameBoard .theModal.on{
+#gameBoard .theModal.on {
     position: absolute;
     margin-top: 200px;
-    margin-left: /*225px;*/700px;
+    margin-left: 225px;;
     height:30%;
     width:30%;
     z-index: 1;
-    background-color: rgb(211, 205, 205);
+    background-color: cornflowerblue;
     border-radius: 20%;
 }
 #gameBoard .theModal.on .content {
@@ -26,6 +26,18 @@
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
+}
+#gameBoard .theModal.on .content .modalButton {
+    margin-left: 28%;
+    color:white;
+    width:50px;
+    text-align:center;
+    border: solid black;
+    background-color: rgb(29, 28, 28);
+    padding: 10px;
+    margin-top:10px;
+    cursor: pointer;
+    user-select: none;
 }
 
 /* Header */
