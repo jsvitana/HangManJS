@@ -23,6 +23,21 @@ $(document).ready(function() {
         }
     }
 
+    //Check if word is finished and win
+    function checkWin(correctWord) { 
+        var didWin = true;
+
+        for(var i=0;i<correctWord.length;i++) {
+            if(correctWord[0] == "_") {
+                didWin = false;
+            }
+        }    
+
+        if(didWin) {
+            correctWord.css("color", "green");
+        }
+    }
+
     $(".modalButton").click(function() {
         //Check if word is valid
         correctWord = $(".correctWord").val();
@@ -53,6 +68,7 @@ $(document).ready(function() {
         var keyValue = $(this).text();
         var letterSpaces = $(".theWordLetter");
         var isCorrectLetter = false;
+        var didWin = true;
 
         //turns off ability to click element 
         $(this).off("click");
@@ -76,16 +92,15 @@ $(document).ready(function() {
             $(hangPic[0]).removeClass("hide").addClass("show");
         }
 
-        //Checks if word is filled in
-        
-
         //checks if hangman is hung
         updatedHangPic = $(".hide");
         if(updatedHangPic.length < 1) {
-            alert("You lost! The correct word was: " + correctWord);
             $(".keyboard").hide();
             fillInMissing();
+            alert("You lost! The correct word was: " + correctWord);
         }
+
+        checkWin(correctWord);
     })
 
 }) 
