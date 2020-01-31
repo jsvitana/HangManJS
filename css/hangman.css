@@ -10,16 +10,16 @@
     background-color: cornflowerblue;
 }
 
-/* The Modal */
+/* The Modals */
 #gameBoard .theModal.on {
     position: absolute;
     margin-top: 200px;
     margin-left: 225px;;
-    height:30%;
+    height:43%;
     width:30%;
     z-index: 1;
     background-color: cornflowerblue;
-    border-radius: 20%;
+    border-radius: 25%;
 }
 #gameBoard .theModal.on .content {
     color: black;

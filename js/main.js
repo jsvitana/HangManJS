@@ -45,10 +45,7 @@ $(document).ready(function() {
         }
     }
 
-    $(".modalButton").click(function() {
-        //Remove content from modal
-        $(".content.start").hide();
-
+    $(".modalButton.setWord").click(function() {
         //Check if word is valid
         correctWord = $(".correctWord").val();
         correctWord = correctWord.toUpperCase();
@@ -65,6 +62,7 @@ $(document).ready(function() {
 
         //Bring back main game screen and shove away modal
         $("#gameBoard").css("background-color", "cornflowerblue");
+        $(".content.start").hide();
         $(".theModal").css("margin-left", "700px");
         $(".keyboard").show();
 
@@ -120,6 +118,22 @@ $(document).ready(function() {
         }
     })
 
+    $(".modalButton.playCPU").click(function() {
+        var wordList = ["Democrat","doctor","everybody","floor","government","huge","kitchen","magazine","national","newspaper","official","organization","painting","performance","population","property","cow","pig","sheep","goat","javascript","alarm","clock","computer","keyboard","pillow","desk","horse","zebra","elephant","television","shelf","curtain","moonlight","vining","pepper","school","chocolate","milk","water","screen","hangman","sunlight","barn","pasture","tractor","kitchen","word","drywall","sheetrock","ceiling"];
+        var randNum = Math.floor(Math.random() * wordList.length);
+
+        correctWord = wordList[randNum];
+        correctWord = correctWord.toUpperCase();
+
+        //Bring back main game screen and shove away modal
+        $("#gameBoard").css("background-color", "cornflowerblue");
+        $(".content.start").hide();
+        $(".theModal").css("margin-left", "700px");
+        $(".keyboard").show();
+
+        //Set the correct word to the chosen word
+        createLetterSpaces();
+    })
 }) 
 
 
