@@ -24,21 +24,31 @@ $(document).ready(function() {
     }
 
     //Check if word is finished and win
-    function checkWin(correctWord) { 
+    function checkWin(letterSpaces) { 
         var didWin = true;
 
-        for(var i=0;i<correctWord.length;i++) {
-            if(correctWord[0] == "_") {
+        for(var i=0;i<letterSpaces.length;i++) {
+            if($(letterSpaces[i]).text() == "_") {
                 didWin = false;
             }
         }    
 
         if(didWin) {
-            correctWord.css("color", "green");
+            $(".keyboard").hide();
+            $(".theWordLetter").css("color", "#00ff00");
+
+            $(".theModal").css("margin-left", "225px");
+            $(".theModal").css("margin-top", "350px");
+            $(".theModal").css("background-color", "white");
+            $(".content.win").show();
+            $(".correctWordEnd").text(correctWord);
         }
     }
 
     $(".modalButton").click(function() {
+        //Remove content from modal
+        $(".content.start").hide();
+
         //Check if word is valid
         correctWord = $(".correctWord").val();
         correctWord = correctWord.toUpperCase();
@@ -68,7 +78,7 @@ $(document).ready(function() {
         var keyValue = $(this).text();
         var letterSpaces = $(".theWordLetter");
         var isCorrectLetter = false;
-        var didWin = true;
+        var didLose = false;
 
         //turns off ability to click element 
         $(this).off("click");
@@ -96,11 +106,18 @@ $(document).ready(function() {
         updatedHangPic = $(".hide");
         if(updatedHangPic.length < 1) {
             $(".keyboard").hide();
+            $(".theModal").css("margin-left", "225px");
+            $(".theModal").css("margin-top", "350px");
+            $(".theModal").css("background-color", "gray");
+            $(".content.lose").show();
+            $(".correctWordEnd").text(correctWord);
             fillInMissing();
-            alert("You lost! The correct word was: " + correctWord);
+            didLose = true;
         }
 
-        checkWin(correctWord);
+        if(!didLose) {
+            checkWin(letterSpaces);
+        }
     })
 
 }) 

@@ -7,10 +7,18 @@
 <body>
     <div id="gameBoard">
         <div class="theModal on">
-            <div class="content">
+            <div class="content start">
                 <label>The Word You Would Like to Use!</label>
                 <input class="correctWord" type="text">
                 <div class="modalButton">Enter!</div>
+            </div>
+            <div class="content win" style="display: none;">
+                <div>You Won! The word was:</div>
+                <h3 class="correctWordEnd" style="color: #00ff00;"></h3>
+            </div>
+            <div class="content lose" style="display: none;">
+                <div>You Lost! The word was:</div>
+                <h3 class="correctWordEnd" style="color: red;"></h3>
             </div>
         </div>
 
