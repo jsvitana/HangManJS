@@ -54,7 +54,7 @@ $(document).ready(function() {
             return;
         }
         for(var i=0;i<correctWord.length;i++) {
-            if((correctWord.charCodeAt(0) < 65) || (correctWord.charCodeAt(0) > 90)) {
+            if((correctWord.charCodeAt(i) < 65) || (correctWord.charCodeAt(i) > 90)) {
                 alert("Please Enter a valid word containing letters A-Z, at the most 10 characters long");
                 return;
             }
