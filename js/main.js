@@ -119,7 +119,7 @@ $(document).ready(function() {
     })
 
     $(".modalButton.playCPU").click(function() {
-        var wordList = ["Democrat","doctor","everybody","floor","government","huge","kitchen","magazine","national","newspaper","official","organization","painting","performance","population","property","cow","pig","sheep","goat","javascript","alarm","clock","computer","keyboard","pillow","desk","horse","zebra","elephant","television","shelf","curtain","moonlight","vining","pepper","school","chocolate","milk","water","screen","hangman","sunlight","barn","pasture","tractor","kitchen","word","drywall","sheetrock","ceiling"];
+        var wordList = ["Democrat","doctor","everybody","floor","government","huge","kitchen","magazine","national","newspaper","official","organization","painting","performance","population","property","cow","pig","sheep","goat","javascript","alarm","clock","computer","keyboard","pillow","desk","horse","zebra","elephant","television","shelf","curtain","moonlight","vining","pepper","school","chocolate","milk","water","screen","hangman","sunlight","barn","pasture","tractor","kitchen","word","drywall","sheetrock","ceiling","crwth","squirrel","deer","beer","dear","chalkboard","window","icecube","programming"];
         var randNum = Math.floor(Math.random() * wordList.length);
 
         correctWord = wordList[randNum];
